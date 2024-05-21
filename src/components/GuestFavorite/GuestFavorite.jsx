@@ -1,4 +1,3 @@
-import React from 'react'
 import GuestFavoriteHeader from './GuestFavoriteHeader'
 import GuestFavoriteContent from './GuestFavoriteContent'
 
