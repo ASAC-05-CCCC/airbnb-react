@@ -1,7 +1,7 @@
-const Login = ({ children, setActive }) => {
+const Login = ({ children, setAccountActive }) => {
   return (
     <>
-      <div className='relative flex items-center justify-center h-full gap-4 '>
+      <div className='relative flex items-center justify-center h-full gap-4'>
         {/* MakeHost*/}
         <div className='flex items-center justify-center'>
           <a
@@ -23,16 +23,17 @@ const Login = ({ children, setActive }) => {
           {/* AccountBtn */}
           <button
             onClick={() => {
-              setActive(prev => !prev)
+              setAccountActive(prev => !prev)
             }}
-            className='relative flex items-center justify-center gap-2 px-3 py-1 transition-all duration-200 ease-in border border-gray-300 rounded-3xl hover:shadow-md'
+            className='flex items-center justify-center gap-2 px-4 py-1 transition-all duration-200 ease-in border border-gray-300 rounded-3xl hover:shadow-md'
           >
-            <div>
+            <div className='flex items-center justify-center w-10'>
+              <img className='w-2/3' src='/src/assets/menu.svg' alt='menu' />
               <img src='/src/assets/myAccountImg.svg' alt='account' />
             </div>
+            <div className='relative'>{children}</div>
           </button>
         </>
-        {children}
       </div>
     </>
   )
