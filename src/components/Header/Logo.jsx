@@ -3,9 +3,9 @@ const Logo = () => {
 
   return (
     <>
-      <div className='inline-flex items-center justify-center w-full'>
+      <div className='inline-flex items-center justify-center flex-'>
         <a href='#'>
-          <img className='w w-[102px] h-8' src={LOGO_URL} />
+          <img className='w-[102px] h-8' src={LOGO_URL} />
         </a>
       </div>
     </>
