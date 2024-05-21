@@ -1,10 +1,12 @@
-import Modal from '../common/Modal'
+import SearchModal from '../common/SearchModal'
 
-const AccountModal = ({ active }) => {
+const AccountModal = ({ accountActive }) => {
   return (
     <>
-      <div className={`absolute right-0 top-14 w-52 ${active ? 'opacity-0' : 'opacity-100'}`}>
-        <Modal>
+      <div
+        className={`absolute right-0 top-10 w-52 ${accountActive ? 'opacity-0' : 'opacity-100'}`}
+      >
+        <SearchModal>
           {/* list */}
           <ul className='right-0 flex flex-col py-2 text-sm text-gray-500 w-50'>
             <div className='flex flex-col border-b-2'>
@@ -26,7 +28,7 @@ const AccountModal = ({ active }) => {
               </li>
             </div>
           </ul>
-        </Modal>
+        </SearchModal>
       </div>
     </>
   )
