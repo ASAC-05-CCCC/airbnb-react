@@ -35,22 +35,27 @@ const commentData = [
     timeStamp: '5 hours ago',
     message: '잘가세요.',
   },
-];
+]
 
 const Review = () => {
   return (
     <div>
       <div>
-        {commentData.map((comment) => {
-          return <>
-          <ReviewHeader image={comment.image}
-          name={comment.name}
-          nationality={comment.nationality}/>
-          <ReviewContent
-          rating={comment.rating}
-          timeStamp={comment.timeStamp}
-          message={comment.message} />
-          </>
+        {commentData.map(comment => {
+          return (
+            <>
+              <ReviewHeader
+                image={comment.image}
+                name={comment.name}
+                nationality={comment.nationality}
+              />
+              <ReviewContent
+                rating={comment.rating}
+                timeStamp={comment.timeStamp}
+                message={comment.message}
+              />
+            </>
+          )
         })}
       </div>
       <div>
