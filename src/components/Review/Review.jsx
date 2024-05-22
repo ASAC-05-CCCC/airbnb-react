@@ -40,10 +40,11 @@ const commentData = [
 const Review = () => {
   return (
     <div>
-      <div>
-        {commentData.map(comment => {
+      <hr className='my-4 border-gray-300' />
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
+        {commentData.map((comment, index) => {
           return (
-            <>
+            <div key={index} className='bg-white p-4 rounded'>
               <ReviewHeader
                 image={comment.image}
                 name={comment.name}
@@ -54,11 +55,11 @@ const Review = () => {
                 timeStamp={comment.timeStamp}
                 message={comment.message}
               />
-            </>
+            </div>
           )
         })}
       </div>
-      <div>
+      <div className='mt-4'>
         <ReviewMoreButton />
       </div>
     </div>

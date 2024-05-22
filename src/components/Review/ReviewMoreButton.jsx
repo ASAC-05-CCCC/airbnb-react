@@ -1,7 +1,11 @@
 const data = 16
 
-const Review = () => {
-  return <button className='border-2 border-solid border-black'>후기 {data}개 모두 보기</button>
+const ReviewMoreButton = () => {
+  return (
+    <button className='border border-solid border-black rounded-lg font-semibold text-center px-4 py-2'>
+      후기 {data}개 모두 보기
+    </button>
+  )
 }
 
-export default Review
+export default ReviewMoreButton
