@@ -1,27 +1,77 @@
-import React from 'react'
-import HostHeader from './HostHeader'
-import HostInfo from './HostInfo'
-import HostSpeak from './HostSpeak'
-import HostContent from './HostContent'
-import HostMessageButton from './HostMessageButton'
-import HostFooter from './HostFooter'
+import HostHeader from './HostHeader.jsx'
+import Hostintro from './Hostintro.jsx'
+import HostContent from './HostContent.jsx'
+import HostMessageButton from './HostMessageButton.jsx'
+import HostFooter from './HostFooter.jsx'
+import Language from '../../assets/Language.svg'
+import Service from '../../assets/Service.svg'
+import HostProfile from './HostProfile.jsx'
 
-const Header = () => {
+const HostProfileData = {
+  name: '현아',
+  superhost: true,
+  review: 16,
+  rating: 5,
+  career: 9,
+}
+
+const HostintroData = [
+  {
+    category: 'language',
+    icon: Language,
+    text: '구사 언어 : 한국어',
+  },
+  {
+    category: 'service',
+    icon: Service,
+    text: '게스트를위해 노력하는 일',
+  },
+]
+
+const HostContentData = [
+  {
+    title: '현아 님은 슈퍼 호스트입니다.',
+    body: '슈퍼호스트는 풍부한 경험과 높은 평점을 자랑하며 게스트가 숙소에서 편안히 머무를 수 있도록 최선을 다하는 호스트입니다.',
+  },
+  {
+    title: '호스트 상세 정보',
+    body: '응답률: 100\n1시간 이내에 응답',
+  },
+]
+
+const Host = () => {
   return (
-    <div>
+    <div className='flex-col mx-5'>
       <div>
         <HostHeader />
       </div>
-      <div>
-        <HostInfo />
-        <HostSpeak />
-        <HostContent />
-        <HostContent />
-        <HostMessageButton />
-        <HostFooter />
+      <div className='flex flex-col sm:flex-row px-10 py-10 gap-10 sm:gap-20 justify-items-start bg-hostcolor rounded-2xl'>
+        <div className='flex flex-col gap-10 sm:w-2/3 sm:pl-4'>
+          <HostProfile
+            name={HostProfileData.name}
+            superhost={HostProfileData.superhost}
+            review={HostProfileData.review}
+            rating={HostProfileData.rating}
+            career={HostProfileData.career}
+          />
+          <div className='flex flex-col'>
+            {HostintroData.map(({ category, icon, text }) => {
+              return <Hostintro category={category} icon={icon} text={text} key={category} /> // key 추가
+            })}
+          </div>
+        </div>
+        <div className='flex flex-col gap-5 sm: w sm:pl-4'>
+          <div className='flex-grow gap-5 sm:w-1/2'>
+            {HostContentData.map(({ title, body }) => {
+              return <HostContent title={title} body={body} key={title} />
+            })}
+          </div>
+          <HostMessageButton />
+          <HostFooter />
+        </div>
       </div>
     </div>
   )
 }
 
-export default Header
+export default Host
