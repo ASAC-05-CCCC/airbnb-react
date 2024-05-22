@@ -1,14 +1,10 @@
-import GuestFavorite from './components/GuestFavorite/GuestFavorite.jsx'
-import Review from './components/Review/Review.jsx'
-
+import Comment from './pages/Comment/Comment.jsx'
 
 function App() {
-
   return (
     <>
       <div>
-        <GuestFavorite/>
-        <Review />
+        <Comment />
       </div>
     </>
   )
