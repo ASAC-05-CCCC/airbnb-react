@@ -1,7 +1,7 @@
 import React from 'react'
 
-const HostContent = () => {
-  return <div>HostContent</div>
+const HostMessageButton = () => {
+  return <div>HostMessageButton</div>
 }
 
-export default HostContent
+export default HostMessageButton
