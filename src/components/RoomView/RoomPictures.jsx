@@ -1,10 +1,10 @@
 import React from 'react'
-import RoomListIcon from '../../assets/RoomList.svg'
-import RoomImage1 from '../../image/RoomImage1.png'
-import RoomImage2 from '../../image/RoomImage2.png'
-import RoomImage3 from '../../image/RoomImage3.png'
-import RoomImage4 from '../../image/RoomImage4.png'
-import RoomImage5 from '../../image/RoomImage5.png'
+import RoomListIcon from '../../assets/RoomViewSvg/RoomList.svg'
+import RoomImage1 from '../../assets/RoomViewImg/RoomImage1.png'
+import RoomImage2 from '../../assets/RoomViewImg/RoomImage2.png'
+import RoomImage3 from '../../assets/RoomViewImg/RoomImage3.png'
+import RoomImage4 from '../../assets/RoomViewImg/RoomImage4.png'
+import RoomImage5 from '../../assets/RoomViewImg/RoomImage5.png'
 
 const RoomPictures = () => {
   return (
