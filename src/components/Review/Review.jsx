@@ -41,20 +41,22 @@ const Review = () => {
   return (
     <div>
       <hr className='my-4 border-gray-300' />
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-2'>
+      <div className='flex flex-wrap justify-start md:flex-row items-stretch '>
         {commentData.map((comment, index) => {
           return (
-            <div key={index} className='bg-white p-4 rounded'>
-              <ReviewHeader
-                image={comment.image}
-                name={comment.name}
-                nationality={comment.nationality}
-              />
-              <ReviewContent
-                rating={comment.rating}
-                timeStamp={comment.timeStamp}
-                message={comment.message}
-              />
+            <div key={index} className='bg-white p-4 px-2 mr-20'>
+              <div className='w-[400px] mb-10 text-base'>
+                <ReviewHeader
+                  image={comment.image}
+                  name={comment.name}
+                  nationality={comment.nationality}
+                />
+                <ReviewContent
+                  rating={comment.rating}
+                  timeStamp={comment.timeStamp}
+                  message={comment.message}
+                />
+              </div>
             </div>
           )
         })}

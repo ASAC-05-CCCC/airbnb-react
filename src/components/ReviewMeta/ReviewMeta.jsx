@@ -16,10 +16,18 @@ const ReviewMetaData = [
   { category: '가격 대비 만족도', value: 4.9, icon: ValueIcon },
 ]
 
+const ratings = [
+  { stars: 5, percentage: 100 },
+  { stars: 4, percentage: 80 },
+  { stars: 3, percentage: 60 },
+  { stars: 2, percentage: 40 },
+  { stars: 1, percentage: 20 },
+]
+
 const ReviewMeta = () => {
   return (
-    <div className='flex gap-4 pb-4 mb-4 '>
-      <ReviewOverall />
+    <div className='flex pb-4 mb-4'>
+      <ReviewOverall ratings={ratings} />
       {ReviewMetaData.map(({ category, value, icon }, index) => (
         <ReviewMetaContent key={index} category={category} value={value} icon={icon} />
       ))}

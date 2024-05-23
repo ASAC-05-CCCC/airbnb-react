@@ -6,7 +6,6 @@ function ReviewMetaContent({ category, value, icon }) {
           <div>{category}</div>
           <div>{value}</div>
         </div>
-
         <img src={icon} className='w-6 h-6' alt={category} />
       </div>
     </div>

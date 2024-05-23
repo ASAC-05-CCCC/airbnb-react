@@ -4,7 +4,7 @@ import Review from '../../components/Review/Review.jsx'
 
 const Comment = () => {
   return (
-    <div className='mx-20'>
+    <div className='px-20'>
       <GuestFavorite />
       <ReviewMeta />
       <Review />
