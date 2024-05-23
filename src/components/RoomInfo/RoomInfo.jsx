@@ -7,8 +7,8 @@ const RoomInfo = () => {
   return (
     <div>
       <SimpleInfo />
-      <RoomHost />
       <InfoDetail />
+      <RoomHost />
     </div>
   )
 }
