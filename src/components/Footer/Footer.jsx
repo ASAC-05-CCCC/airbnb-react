@@ -1,7 +1,13 @@
-import React from 'react'
+import NextTravelTitle from '../NextTravel/NextTravelTitle'
+import FooterTitle from './FooterTitle'
 
-const Header = () => {
-  return <div>Header</div>
+const Footer = () => {
+  return (
+    <footer>
+      <NextTravelTitle />
+      <FooterTitle />
+    </footer>
+  )
 }
 
-export default Header
+export default Footer
