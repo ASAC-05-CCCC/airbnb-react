@@ -45,8 +45,8 @@ const Host = () => {
       <div>
         <HostHeader />
       </div>
-      <div className='flex items-center justify-center  bg-hostColor rounded-2xl pb-6 pt-1 max-w-5xl'>
-        <div className='flex flex-col  lg:flex-row gap-8 lg:gap-12 lg:px-10 justify-items-center items-center'>
+      <div className='flex items-center justify-center  bg-hostColor rounded-2xl max-w-5xl'>
+        <div className='flex flex-col  lg:flex-row gap-8 lg:gap-12 lg:px-10 justify-items-center items-center pt-10 pb-6'>
           <div className='flex flex-col lg:gap-8 '>
             <HostProfile
               name={HostProfileData.name}
