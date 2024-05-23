@@ -18,7 +18,7 @@ const ReviewMetaData = [
 
 const ReviewMeta = () => {
   return (
-    <div className='flex flex-wrap justify-between'>
+    <div className='flex gap-4 pb-4 mb-4 '>
       <ReviewOverall />
       {ReviewMetaData.map(({ category, value, icon }, index) => (
         <ReviewMetaContent key={index} category={category} value={value} icon={icon} />
