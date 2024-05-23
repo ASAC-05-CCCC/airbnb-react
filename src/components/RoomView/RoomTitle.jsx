@@ -1,6 +1,6 @@
 import React from 'react'
-import shareIcon from '../../assets/share.svg'
-import saveIcon from '../../assets/store.svg'
+import shareIcon from '../../assets/RoomViewSvg/share.svg'
+import saveIcon from '../../assets//RoomViewSvg/store.svg'
 
 const RoomTitle = () => {
   return (
