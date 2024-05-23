@@ -45,28 +45,31 @@ const Host = () => {
       <div>
         <HostHeader />
       </div>
-      <div className='flex items-center justify-center  bg-hostColor rounded-2xl pb-6 pt-10'>
-        <div className='flex flex-col  lg:flex-row gap-8 lg:gap-12 justify-items-start items-center'>
-          <HostProfile
-            name={HostProfileData.name}
-            superHost={HostProfileData.superHost}
-            review={HostProfileData.review}
-            rating={HostProfileData.rating}
-            career={HostProfileData.career}
-          />
-          <div className='flex flex-col'>
-            {HostIntroData.map(({ category, icon, text }) => {
-              return <HostIntro category={category} icon={icon} text={text} key={category} /> // key 추가
-            })}
+      <div className='flex items-center justify-center  bg-hostColor rounded-2xl pb-6 pt-1 max-w-5xl'>
+        <div className='flex flex-col  lg:flex-row gap-8 lg:gap-12 lg:px-10 justify-items-center items-center'>
+          <div className='flex flex-col lg:gap-8 '>
+            <HostProfile
+              name={HostProfileData.name}
+              superHost={HostProfileData.superHost}
+              review={HostProfileData.review}
+              rating={HostProfileData.rating}
+              career={HostProfileData.career}
+            />
+            <div className='mt-4 lg:mt-0'>
+              {HostIntroData.map(({ category, icon, text }) => {
+                return <HostIntro category={category} icon={icon} text={text} key={category} /> // key 추가
+              })}
+            </div>
           </div>
-
-          <div className='sm:w-1/2'>
-            {HostContentData.map(({ title, body }) => {
-              return <HostContent title={title} body={body} key={title} />
-            })}
+          <div className='flex flex-col w-[400px] lg:w-1/2 lg:gap-8'>
+            <div className='sm:w-full'>
+              {HostContentData.map(({ title, body }) => {
+                return <HostContent title={title} body={body} key={title} />
+              })}
+            </div>
+            <HostMessageButton />
+            <HostFooter />
           </div>
-          <HostMessageButton />
-          <HostFooter />
         </div>
       </div>
     </div>
