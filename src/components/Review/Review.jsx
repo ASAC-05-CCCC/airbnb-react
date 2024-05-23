@@ -41,11 +41,11 @@ const Review = () => {
   return (
     <div>
       <hr className='my-4 border-gray-300' />
-      <div className='flex flex-wrap justify-start md:flex-row items-stretch '>
+      <div className='grid grid-cols-1 lg:grid-cols-2 w-full '>
         {commentData.map((comment, index) => {
           return (
             <div key={index} className='bg-white p-4 px-2 mr-20'>
-              <div className='w-[400px] mb-10 text-base'>
+              <div className=' mb-10 text-base'>
                 <ReviewHeader
                   image={comment.image}
                   name={comment.name}
