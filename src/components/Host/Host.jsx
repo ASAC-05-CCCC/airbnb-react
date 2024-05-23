@@ -1,5 +1,5 @@
 import HostHeader from './HostHeader.jsx'
-import Hostintro from './Hostintro.jsx'
+import HostIntro from './HostIntro.jsx'
 import HostContent from './HostContent.jsx'
 import HostMessageButton from './HostMessageButton.jsx'
 import HostFooter from './HostFooter.jsx'
@@ -9,13 +9,13 @@ import HostProfile from './HostProfile.jsx'
 
 const HostProfileData = {
   name: '현아',
-  superhost: true,
+  superHost: true,
   review: 16,
   rating: 5,
   career: 9,
 }
 
-const HostintroData = [
+const HostIntroData = [
   {
     category: 'language',
     icon: Language,
@@ -45,18 +45,18 @@ const Host = () => {
       <div>
         <HostHeader />
       </div>
-      <div className='flex flex-col sm:flex-row px-10 py-10 gap-10 sm:gap-20 justify-items-start bg-hostcolor rounded-2xl'>
-        <div className='flex flex-col gap-10 sm:w-2/3 sm:pl-4'>
+      <div className='flex flex-col sm:flex-row px-6 pb-6 pt-10 gap-10 sm:gap-20 justify-items-start bg-hostColor rounded-2xl'>
+        <div className='flex flex-col gap-8 sm:w-2/3 sm:pl-4'>
           <HostProfile
             name={HostProfileData.name}
-            superhost={HostProfileData.superhost}
+            superHost={HostProfileData.superHost}
             review={HostProfileData.review}
             rating={HostProfileData.rating}
             career={HostProfileData.career}
           />
           <div className='flex flex-col'>
-            {HostintroData.map(({ category, icon, text }) => {
-              return <Hostintro category={category} icon={icon} text={text} key={category} /> // key 추가
+            {HostIntroData.map(({ category, icon, text }) => {
+              return <HostIntro category={category} icon={icon} text={text} key={category} /> // key 추가
             })}
           </div>
         </div>

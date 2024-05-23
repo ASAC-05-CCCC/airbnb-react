@@ -1,4 +1,4 @@
-import Superhost from '../../assets/Superhost.svg'
+import SuperHost from '../../assets/SuperHost.svg'
 
 const Label = ({ label, value }) => {
   return (
@@ -14,18 +14,18 @@ const Label = ({ label, value }) => {
   )
 }
 
-const HostProfile = ({ name, superhost, review, rating, career }) => {
+const HostProfile = ({ name, superHost, review, rating, career }) => {
   return (
     <div className=''>
-      <section className='flex bg-white rounded-3xl py-6 px-4 bg-wite justify-between shadow-md'>
-        <div className='gap-2'>
+      <section className='flex bg-white rounded-3xl py-8 px-6 bg-wite justify-between shadow-md'>
+        <div className=' gap-2'>
           <button className='rounded-full overflow-hidden focus:outline-none'>
             <img src='asb' alt='User profile' className='h-24 w-24 rounded-full bg-gray-300' />
           </button>
           <h2 className='text-center text-3xl font-bold'>{name}</h2>
-          {superhost && (
+          {superHost && (
             <span className='flex items-center text-sm mt-2'>
-              <img src={Superhost} className='w-6 h-6' />
+              <img src={SuperHost} className='w-6 h-6' />
               <span className=' text-sm ml-1'>슈퍼호스트</span>
             </span>
           )}

@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        hostcolor: '#F0EFE9',
+        hostColor: '#F0EFE9',
       },
     },
   },
