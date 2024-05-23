@@ -1,12 +1,13 @@
 import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
 
 const MainLayout = ({ children }) => {
   return (
     <>
-      <div className='flex flex-col items-center px-10'>
+      <div className='flex flex-col items-center'>
         <Header />
-        <section className='w-full h-screen bg-sky-300'>{children}</section>
-        {/* footer */}
+        <section className='w-full h-screen'>{children}</section>
+        <Footer />
       </div>
     </>
   )
