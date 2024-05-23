@@ -45,8 +45,8 @@ const Host = () => {
       <div>
         <HostHeader />
       </div>
-      <div className='flex flex-col sm:flex-row px-6 pb-6 pt-10 gap-10 sm:gap-20 justify-items-start bg-hostColor rounded-2xl'>
-        <div className='flex flex-col gap-8 sm:w-2/3 sm:pl-4'>
+      <div className='flex items-center justify-center  bg-hostColor rounded-2xl pb-6 pt-10'>
+        <div className='flex flex-col  lg:flex-row gap-8 lg:gap-12 justify-items-start items-center'>
           <HostProfile
             name={HostProfileData.name}
             superHost={HostProfileData.superHost}
@@ -59,9 +59,8 @@ const Host = () => {
               return <HostIntro category={category} icon={icon} text={text} key={category} /> // key 추가
             })}
           </div>
-        </div>
-        <div className='flex flex-col gap-5 sm: w sm:pl-4'>
-          <div className='flex-grow gap-5 sm:w-1/2'>
+
+          <div className='sm:w-1/2'>
             {HostContentData.map(({ title, body }) => {
               return <HostContent title={title} body={body} key={title} />
             })}
