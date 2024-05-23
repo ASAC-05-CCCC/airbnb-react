@@ -3,7 +3,7 @@ import Notification from './components/Notification/Notification.jsx'
 function App() {
   return (
     <>
-      <div>
+      <div className=' px-10'>
         <Notification />
       </div>
     </>

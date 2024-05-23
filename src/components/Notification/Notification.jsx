@@ -45,12 +45,14 @@ const NotificationData = [
 
 const Notification = () => {
   return (
-    <div className=' px-20  py-12'>
-      <NotificationHeader />
-      <div className='grid grid-cols-3 gap-4'>
-        {NotificationData.map(({ title, body, footer }) => {
-          return <NotificationContents title={title} body={body} footer={footer} />
-        })}
+    <div className='flex justify-center py-12'>
+      <div>
+        <NotificationHeader />
+        <div className='grid grid-cols-1 flex-wrap mx-2 lg:grid-cols-3'>
+          {NotificationData.map(({ title, body, footer }) => {
+            return <NotificationContents title={title} body={body} footer={footer} />
+          })}
+        </div>
       </div>
     </div>
   )
