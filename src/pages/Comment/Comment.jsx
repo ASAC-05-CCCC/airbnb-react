@@ -74,9 +74,9 @@ const Comment = () => {
   useEffect(() => {
     fetch('/json/Review.json')
       .then(response => response.json())
-      .then(async data => {
-        setReviewData(await processReviewData(data))
-        setReivewMetaData(await generateReviewMetaData(data))
+      .then(data => {
+        setReviewData(processReviewData(data))
+        setReivewMetaData(generateReviewMetaData(data))
       })
       .catch(error => console.error('Error fetching ReviewData.json:', error))
   }, [])
