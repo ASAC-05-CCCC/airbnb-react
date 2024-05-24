@@ -4,6 +4,7 @@ import { Pagination, Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import GuestPreference from './GuestPreference'
 
 // 장소 이미지 슬라이더 리스트 (사진 넘기는거)
 const PlaceCardImageList = ({ photos }) => {
@@ -25,6 +26,11 @@ const PlaceCardImageList = ({ photos }) => {
         {photos.map((photo, index) => (
           <SwiperSlide key={index}>
             <div className='relative w-full h-full'>
+              {/* 게스트 선호 표시 */}
+              <div className='absolute top-3 left-3 z-10 px-3 py-1 text-black bg-white rounded-3xl font-semibold'>
+                <GuestPreference />
+              </div>
+
               <img
                 src={photo}
                 alt={`Slide`}
