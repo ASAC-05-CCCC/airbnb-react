@@ -1,6 +1,6 @@
 const SearchBar = ({ children }) => {
   return (
-    <div className='flex justify-center py-6 sm:w-[500px] lg:w-[700px]  top-10 transition-all'>
+    <div className='flex justify-center sm:w-full lg:w-[800px] transition-all'>
       <div className='relative w-full '>
         {children}
         {/* Search Bar */}
