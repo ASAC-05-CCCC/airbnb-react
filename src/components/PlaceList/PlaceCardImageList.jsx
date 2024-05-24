@@ -10,7 +10,7 @@ const PlaceCardImageList = ({ photos }) => {
   // price에서 숫자만 추출하고 정수로 변환
 
   return (
-    <div className='relative w-[303px] h-[287px] group'>
+    <div className='relative w-full group'>
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -28,7 +28,7 @@ const PlaceCardImageList = ({ photos }) => {
               <img
                 src={photo}
                 alt={`Slide`}
-                className='w-[303px] h-[287px] bg-zinc-400 rounded-xl'
+                className='w-full h-full object-cover aspect-square bg-zinc-400 rounded-xl'
               />
             </div>
           </SwiperSlide>
