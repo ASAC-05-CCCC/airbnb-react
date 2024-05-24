@@ -9,17 +9,7 @@ import ValueIcon from '../../assets/Value.svg'
 import React, { useState, useEffect } from 'react'
 
 const ReviewMeta = ({ reviewMetaData }) => {
-  const [metaData, setMetaData] = useState(null)
-
-  useEffect(() => {
-    if (reviewMetaData && Object.keys(reviewMetaData).length > 0) {
-      setMetaData(reviewMetaData)
-    } else {
-      setMetaData(null)
-    }
-  }, [reviewMetaData])
-
-  if (metaData === null) {
+  if (!reviewMetaData || reviewMetaData.length === 0) {
     return <div>Loading...</div>
   }
 
@@ -36,15 +26,13 @@ const ReviewMeta = ({ reviewMetaData }) => {
     return {
       category: category,
       icon: icon,
-      value: metaData?.MetaData[index]?.value ?? 0,
+      value: reviewMetaData?.MetaData[index]?.value ?? 0,
     }
   })
 
-  console.log([...metaData.ratings].reverse())
-
   return (
     <div className='flex pb-4 mb-4'>
-      <ReviewOverall ratings={[...metaData.ratings].reverse()} />
+      <ReviewOverall ratings={[...reviewMetaData.ratings].reverse()} />
       {mergeData.map(({ category, value, icon }, index) => (
         <ReviewMetaContent key={index} category={category} value={value} icon={icon} />
       ))}
