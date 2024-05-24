@@ -1,14 +1,6 @@
-const ratings = [
-  { stars: 5, percentage: 100 },
-  { stars: 4, percentage: 80 },
-  { stars: 3, percentage: 60 },
-  { stars: 2, percentage: 40 },
-  { stars: 1, percentage: 20 },
-]
-
-const ReviewOverall = () => {
+const ReviewOverall = ({ ratings }) => {
   return (
-    <div className='items-center'>
+    <div className='items-center w-[400px] mr-8'>
       <h3 className='font-semibold text-sm w-32'>전체 평점</h3>
       <ol className='list-none justify-between'>
         {ratings.map((rating, index) => (
