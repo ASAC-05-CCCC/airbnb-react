@@ -4,7 +4,7 @@ import singleBed from '../../assets/SleepSpecSvg/singleBed.svg'
 
 const SleepSpec = () => {
   return (
-    <div className="max-w-7xl mx-auto p-4">
+    <div className="w-full max-w-7xl mx-auto p-4">
       <div className="border-b pb-8">
         <h2 className="text-2xl font-bold mb-4">숙박 장소</h2>
         <div className="flex flex-wrap -mx-2">
