@@ -5,7 +5,10 @@ const ReviewContent = ({ rating, timeStamp, message }) => {
       <div className='flex items-center'>
         <div className='flex'>
           {[...Array(totalStars)].map((_, index) => (
-            <span key={index} className={index < rating ? 'text-black' : 'text-gray-400'}>
+            <span
+              key={index}
+              className={index < Math.round(rating) ? 'text-black' : 'text-gray-400'}
+            >
               ★
             </span>
           ))}
