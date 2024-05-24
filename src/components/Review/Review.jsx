@@ -14,11 +14,7 @@ const Review = ({ reviewData }) => {
           return (
             <div key={index} className='bg-white p-4 px-2 mr-20'>
               <div className=' mb-10 text-base'>
-                <ReviewHeader
-                  image={comment.image}
-                  name={comment.name}
-                  nationality={comment.nationality}
-                />
+                <ReviewHeader image={comment.image} name={comment.name} country={comment.country} />
                 <ReviewContent
                   rating={comment.rating}
                   timeStamp={comment.timeStamp}

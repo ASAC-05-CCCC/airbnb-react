@@ -1,6 +1,6 @@
 import DefaultProfileImage from '../../assets/DefaultProfileImage.svg'
 
-const ReviewHeader = ({ image, name, nationality }) => (
+const ReviewHeader = ({ image, name, country }) => (
   <div className='flex items-center'>
     <img
       src={image}
@@ -13,7 +13,7 @@ const ReviewHeader = ({ image, name, nationality }) => (
     />
     <div>
       <p className='font-bold'>{name}</p>
-      <p className='text-sm font-normal text-neutral-800'>{nationality}</p>
+      <p className='text-sm font-normal text-neutral-800'>{country}</p>
     </div>
   </div>
 )
