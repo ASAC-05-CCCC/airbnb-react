@@ -1,11 +1,5 @@
-import Comment from './pages/Comment/Comment.jsx'
-
 function App() {
-  return (
-    <>
-      <Comment />
-    </>
-  )
+  return <></>
 }
 
 export default App
