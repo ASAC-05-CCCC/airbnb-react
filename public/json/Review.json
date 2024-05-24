@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "review": {
+      "name": "AliceSmith",
+      "country": "USA",
+      "timestamp": "2023-06-15",
+      "message": "Great product, highly recommend!",
+      "image": "https://example.com/image1.jpg"
+    },
+    "Ratings": {
+      "Cleanliness": 5.0,
+      "Accuracy": 4.0,
+      "CheckIn": 3.0,
+      "Communication": 2.0,
+      "Location": 1.0,
+      "Value": 0.0
+    }
+  },
+  {
+    "id": 2,
+    "review": {
+      "name": "JohnDoe",
+      "country": "Canada",
+      "timestamp": "2023-07-20",
+      "message": "Excellent service and quality!",
+      "image": "https://example.com/image2.jpg"
+    },
+    "Ratings": {
+      "Cleanliness": 4.0,
+      "Accuracy": 5.0,
+      "CheckIn": 4.5,
+      "Communication": 5.0,
+      "Location": 3.0,
+      "Value": 4.0
+    }
+  },
+  {
+    "id": 3,
+    "review": {
+      "name": "SophieBrown",
+      "country": "UK",
+      "timestamp": "2023-08-10",
+      "message": "Had a pleasant stay, would come again.",
+      "image": "https://example.com/image3.jpg"
+    },
+    "Ratings": {
+      "Cleanliness": 4.5,
+      "Accuracy": 4.0,
+      "CheckIn": 3.5,
+      "Communication": 4.0,
+      "Location": 4.5,
+      "Value": 3.5
+    }
+  },
+  {
+    "id": 4,
+    "review": {
+      "name": "JuanMartinez",
+      "country": "Spain",
+      "timestamp": "2023-09-05",
+      "message": "Todo perfecto! Gracias!",
+      "image": "https://example.com/image4.jpg"
+    },
+    "Ratings": {
+      "Cleanliness": 5.0,
+      "Accuracy": 5.0,
+      "CheckIn": 5.0,
+      "Communication": 4.5,
+      "Location": 4.0,
+      "Value": 4.5
+    }
+  },
+  {
+    "id": 5,
+    "review": {
+      "name": "HiroYamamoto",
+      "country": "Japan",
+      "timestamp": "2023-10-12",
+      "message": "素晴らしいサービスと快適な滞在でした。",
+      "image": "https://example.com/image5.jpg"
+    },
+    "Ratings": {
+      "Cleanliness": 4.5,
+      "Accuracy": 4.5,
+      "CheckIn": 4.0,
+      "Communication": 4.0,
+      "Location": 5.0,
+      "Value": 4.5
+    }
+  },
+  {
+    "id": 6,
+    "review": {
+      "name": "MariaGonzalez",
+      "country": "Mexico",
+      "timestamp": "2023-11-20",
+      "message": "Excelente servicio y atención al cliente.",
+      "image": "https://example.com/image6.jpg"
+    },
+    "Ratings": {
+      "Cleanliness": 4.0,
+      "Accuracy": 4.5,
+      "CheckIn": 4.0,
+      "Communication": 5.0,
+      "Location": 3.5,
+      "Value": 4.0
+    }
+  },
+  {
+    "id": 7,
+    "review": {
+      "name": "LenaKovalenko",
+      "country": "Russia",
+      "timestamp": "2023-12-25",
+      "message": "Прекрасное место для отдыха, всё понравилось!",
+      "image": "https://example.com/image7.jpg"
+    },
+    "Ratings": {
+      "Cleanliness": 4.5,
+      "Accuracy": 4.0,
+      "CheckIn": 4.5,
+      "Communication": 3.5,
+      "Location": 4.0,
+      "Value": 3.5
+    }
+  },
+  {
+    "id": 8,
+    "review": {
+      "name": "ChenWei",
+      "country": "China",
+      "timestamp": "2024-01-10",
+      "message": "非常棒的住宿体验，值得推荐！",
+      "image": "https://example.com/image8.jpg"
+    },
+    "Ratings": {
+      "Cleanliness": 4.5,
+      "Accuracy": 4.5,
+      "CheckIn": 4.0,
+      "Communication": 4.0,
+      "Location": 4.5,
+      "Value": 4.0
+    }
+  },
+  {
+    "id": 9,
+    "review": {
+      "name": "AnnaNovak",
+      "country": "Germany",
+      "timestamp": "2024-02-15",
+      "message": "Toller Ort, um sich zu entspannen und die Natur zu genießen.",
+      "image": "https://example.com/image9.jpg"
+    },
+    "Ratings": {
+      "Cleanliness": 5.0,
+      "Accuracy": 4.0,
+      "CheckIn": 4.5,
+      "Communication": 3.5,
+      "Location": 5.0,
+      "Value": 4.5
+    }
+  },
+  {
+    "id": 10,
+    "review": {
+      "name": "YukiSato",
+      "country": "Japan",
+      "timestamp": "2024-03-20",
+      "message": "素晴らしいロケーションと快適な宿泊でした。",
+      "image": "https://example.com/image10.jpg"
+    },
+    "Ratings": {
+      "Cleanliness": 4.0,
+      "Accuracy": 4.5,
+      "CheckIn": 4.0,
+      "Communication": 4.0,
+      "Location": 5.0,
+      "Value": 4.5
+    }
+  }
+]

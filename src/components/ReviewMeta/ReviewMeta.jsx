@@ -6,6 +6,7 @@ import CheckInIcon from '../../assets/CheckIn.svg'
 import CommunicationIcon from '../../assets/Communication.svg'
 import LocationIcon from '../../assets/Location.svg'
 import ValueIcon from '../../assets/Value.svg'
+import Review from '../../../public/json/Review.json'
 
 const ReviewMetaData = [
   { category: '청결도', value: 5.0, icon: CleanlinessIcon },
