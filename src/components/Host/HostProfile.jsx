@@ -6,8 +6,8 @@ const Label = ({ label, value }) => {
       <span className='text-xs font-bold'>{label}</span>
       <span className='text-xl flex items-baseline'>
         {value}
-        <span className='text-sm ml-1'>
-          {label === '후기' ? '개' : label === '평점' ? '⭐' : '개월'}
+        <span className=' text-base ml-1'>
+          {label === '후기' ? '개' : label === '평점' ? '★' : '개월'}
         </span>
       </span>
     </div>

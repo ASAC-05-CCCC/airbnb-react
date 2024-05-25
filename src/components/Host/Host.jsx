@@ -41,34 +41,38 @@ const HostContentData = [
 
 const Host = () => {
   return (
-    <div className='flex-col mx-5'>
-      <div>
-        <HostHeader />
-      </div>
-      <div className='flex items-center justify-center  bg-hostColor rounded-2xl max-w-5xl'>
-        <div className='flex flex-col  lg:flex-row gap-8 lg:gap-12 lg:px-10 justify-items-center items-center pt-10 pb-6'>
-          <div className='flex flex-col lg:gap-8 '>
-            <HostProfile
-              name={HostProfileData.name}
-              superHost={HostProfileData.superHost}
-              review={HostProfileData.review}
-              rating={HostProfileData.rating}
-              career={HostProfileData.career}
-            />
-            <div className='mt-4 lg:mt-0'>
-              {HostIntroData.map(({ category, icon, text }) => {
-                return <HostIntro category={category} icon={icon} text={text} key={category} /> // key 추가
-              })}
+    <div className='flex justify-center px-10'>
+      <div className='flex-col max-w-[1000px]'>
+        <div>
+          <HostHeader />
+        </div>
+        <div className='flex items-center justify-center  bg-hostColor rounded-2xl flex-auto mx-auto'>
+          <div className='pt-10 pb-6'>
+            <div className='flex flex-col px-20  lg:flex-row gap-8 lg:gap-12 lg:px-10  justify-start items-center'>
+              <div className='flex flex-col lg:gap-8 '>
+                <HostProfile
+                  name={HostProfileData.name}
+                  superHost={HostProfileData.superHost}
+                  review={HostProfileData.review}
+                  rating={HostProfileData.rating}
+                  career={HostProfileData.career}
+                />
+                <div className='mt-4 lg:mt-0'>
+                  {HostIntroData.map(({ category, icon, text }) => {
+                    return <HostIntro category={category} icon={icon} text={text} key={category} /> // key 추가
+                  })}
+                </div>
+              </div>
+              <div className='flex flex-col w-[340px] lg:w-1/2 lg:gap-8'>
+                <div className='sm:w-full'>
+                  {HostContentData.map(({ title, body }) => {
+                    return <HostContent title={title} body={body} key={title} />
+                  })}
+                </div>
+                <HostMessageButton />
+                <HostFooter />
+              </div>
             </div>
-          </div>
-          <div className='flex flex-col w-[400px] lg:w-1/2 lg:gap-8'>
-            <div className='sm:w-full'>
-              {HostContentData.map(({ title, body }) => {
-                return <HostContent title={title} body={body} key={title} />
-              })}
-            </div>
-            <HostMessageButton />
-            <HostFooter />
           </div>
         </div>
       </div>
