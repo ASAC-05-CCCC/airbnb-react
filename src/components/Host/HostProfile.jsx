@@ -2,11 +2,11 @@ import SuperHost from '../../assets/SuperHost.svg'
 
 const Label = ({ label, value }) => {
   return (
-    <div className='flex flex-col items-center mr-4'>
+    <div className='flex flex-col items-start gap-1 w-[96px] '>
       <span className='text-xs font-bold'>{label}</span>
       <span className='text-xl flex items-baseline'>
         {value}
-        <span className=' text-base ml-1'>
+        <span className='text-base ml-1'>
           {label === '후기' ? '개' : label === '평점' ? '★' : '개월'}
         </span>
       </span>
@@ -17,11 +17,11 @@ const Label = ({ label, value }) => {
 const HostProfile = ({ name, superHost, review, rating, career }) => {
   return (
     <section className='flex bg-white rounded-3xl py-8 px-6 bg-wite justify-between shadow-md w-[341px]'>
-      <div className=' gap-2'>
+      <div className='flex flex-col justify-center items-center gap-2'>
         <button className='rounded-full overflow-hidden focus:outline-none'>
           <img src='asb' alt='User profile' className='h-24 w-24 rounded-full bg-gray-300' />
         </button>
-        <h2 className='text-center text-3xl font-bold'>{name}</h2>
+        <h2 className='text-center text-3xl font-bold w-[150px]'>{name}</h2>
         {superHost && (
           <span className='flex items-center text-sm mt-2'>
             <img src={SuperHost} className='w-6 h-6' />
@@ -29,14 +29,12 @@ const HostProfile = ({ name, superHost, review, rating, career }) => {
           </span>
         )}
       </div>
-      <div className='ml-4 mt-2 mb-2 '>
-        <div className='items-center flex flex-col'>
-          <Label label='후기' value={review} />
-          <hr className='block mt-2 mb-2 mx-auto border border-inset w-full'></hr>
-          <Label label='평점' value={rating} />
-          <hr className='block mt-2 mb-2 mx-auto border border-inset w-full'></hr>
-          <Label label='호스팅 경력' value={career} />
-        </div>
+      <div className='flex flex-col'>
+        <Label label='후기' value={review} />
+        <hr className='block mt-2 mb-2 mx-auto border border-inset w-full'></hr>
+        <Label label='평점' value={rating} />
+        <hr className='block mt-2 mb-2 mx-auto border border-inset w-full'></hr>
+        <Label label='호스팅 경력' value={career} />
       </div>
     </section>
   )
