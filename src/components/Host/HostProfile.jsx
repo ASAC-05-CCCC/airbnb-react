@@ -1,13 +1,22 @@
 import SuperHost from '../../assets/SuperHost.svg'
 
 const Label = ({ label, value }) => {
+  const valueData = () => {
+    if (label === '호스팅 경력' && value > 12) {
+      return Math.floor(value / 12)
+    } else if (value === 0) {
+      return 1
+    } else {
+      return value
+    }
+  }
   return (
     <div className='flex flex-col items-start gap-1 w-[96px] '>
       <span className='text-xs font-bold'>{label}</span>
       <span className='text-xl flex items-baseline'>
-        {value}
+        {valueData()}
         <span className='text-base ml-1'>
-          {label === '후기' ? '개' : label === '평점' ? '★' : '개월'}
+          {label === '후기' ? '개' : label === '평점' ? '★' : value > 12 ? '년' : '개월'}
         </span>
       </span>
     </div>
