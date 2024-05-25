@@ -17,7 +17,7 @@ const HostProfileData = {
 
 const HostIntroData = [
   {
-    category: 'language',
+    category: 'Language',
     icon: Language,
     text: '구사 언어 : 한국어',
   },
@@ -57,18 +57,16 @@ const Host = () => {
                   rating={HostProfileData.rating}
                   career={HostProfileData.career}
                 />
-                <div className='mt-4 lg:mt-0'>
+                <div className='flex flex-col mt-4 lg:mt-0 gap-4'>
                   {HostIntroData.map(({ category, icon, text }) => {
                     return <HostIntro category={category} icon={icon} text={text} key={category} /> // key 추가
                   })}
                 </div>
               </div>
-              <div className='flex flex-col w-[340px] lg:w-1/2 lg:gap-8'>
-                <div className='sm:w-full'>
-                  {HostContentData.map(({ title, body }) => {
-                    return <HostContent title={title} body={body} key={title} />
-                  })}
-                </div>
+              <div className='flex flex-col w-[340px] lg:w-2/3 lg:gap-8'>
+                {HostContentData.map(({ title, body }) => {
+                  return <HostContent title={title} body={body} key={title} />
+                })}
                 <HostMessageButton />
                 <HostFooter />
               </div>
