@@ -1,5 +1,4 @@
 const NotificationContents = ({ title, body, footer }) => {
-  console.log(footer)
   return (
     <div className=' px-2 max-w-80 max-h-40 text-base'>
       <div className=' mr-8'>
