@@ -63,7 +63,7 @@ const Host = () => {
                   })}
                 </div>
               </div>
-              <div className='flex flex-col w-[340px] lg:w-2/3 lg:gap-8'>
+              <div className='flex flex-col w-[340px] gap-8 lg:w-2/3 lg:gap-8 '>
                 {HostContentData.map(({ title, body }) => {
                   return <HostContent title={title} body={body} key={title} />
                 })}
