@@ -9,9 +9,7 @@ import './NavigationCustom.css'
 import like from '../../assets/like.svg'
 
 // 장소 이미지 슬라이더 리스트 (사진 넘기는거)
-const PlaceCardImageList = ({ photos }) => {
-  // price에서 숫자만 추출하고 정수로 변환
-
+const PlaceCardImageList = ({ photos, guestFavorite }) => {
   return (
     <div className='relative w-full group'>
       <Swiper
@@ -32,11 +30,12 @@ const PlaceCardImageList = ({ photos }) => {
               <div className='absolute top-2 right-2 z-20 p-2'>
                 <img src={like} alt='Like' className='w-7 h-7' />
               </div>
-              {/* 게스트 선호 표시 */}
-              <div className='absolute top-3 left-3 z-10 px-3 py-1 text-black bg-white rounded-3xl font-semibold'>
-                <GuestPreference />
-              </div>
-
+              {/* guestFavorite이 true면 게스트 선호 표시 */}
+              {guestFavorite && (
+                <div className='absolute top-3 left-3 z-10 px-3 py-1 text-black bg-white rounded-3xl font-semibold'>
+                  <GuestPreference />
+                </div>
+              )}
               <img
                 src={photo}
                 alt={`Slide`}
