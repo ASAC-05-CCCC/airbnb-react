@@ -1,4 +1,8 @@
-const Login = ({ children, setAccountActive }) => {
+import useModal from '../../hooks/useModal'
+import AccountModal from './AccountModal'
+
+const Login = () => {
+  const { Modal, isOpen, open, close } = useModal()
   return (
     <>
       <div className='relative flex items-center justify-center h-full gap-4'>
@@ -22,16 +26,21 @@ const Login = ({ children, setAccountActive }) => {
         <>
           {/* AccountBtn */}
           <button
-            onClick={() => {
-              setAccountActive(prev => !prev)
-            }}
+            onClick={() => (isOpen ? close() : open())}
             className='flex items-center justify-center gap-2 px-4 py-1 transition-all duration-200 ease-in border border-gray-300 rounded-3xl hover:shadow-md'
           >
             <div className='flex items-center justify-center w-10'>
               <img className='w-2/3' src='/src/assets/menu.svg' alt='menu' />
               <img src='/src/assets/myAccountImg.svg' alt='account' />
             </div>
-            <div className='relative'>{children}</div>
+            <div className='relative'>
+              <div className={`absolute right-0 top-10 w-52 opacity-100`}>
+                <Modal>
+                  <AccountModal />
+                </Modal>
+              </div>
+              {/* 모달이 들어갈 곳 */}
+            </div>
           </button>
         </>
       </div>
