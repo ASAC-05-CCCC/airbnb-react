@@ -34,7 +34,7 @@ const Login = () => {
               <img src='/src/assets/myAccountImg.svg' alt='account' />
             </div>
             <div className='relative'>
-              <div className={`absolute right-0 top-10 w-52 opacity-100`}>
+              <div className={`absolute right-0 top-10 opacity-100`}>
                 <Modal>
                   <AccountModal />
                 </Modal>
