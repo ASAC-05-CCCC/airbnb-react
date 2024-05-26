@@ -25,8 +25,8 @@ const Review = ({ reviewData }) => {
           )
         })}
       </div>
-      <div className='mt-4'>
-        <ReviewMoreButton setMoreReview={setMoreReview} />
+      <div className='flex justify-between mt-4'>
+        <ReviewMoreButton setMoreReview={setMoreReview} data={reviewData.length} />
       </div>
     </div>
   )
