@@ -1,6 +1,7 @@
 import GuestFavorite from '../../components/GuestFavorite/GuestFavorite.jsx'
 import ReviewMeta from '../../components/ReviewMeta/ReviewMeta.jsx'
 import Review from '../../components/Review/Review.jsx'
+import ReviewInform from '../../components/ReivewInform/ReviewInform.jsx'
 import { useState, useEffect } from 'react'
 
 const generateReviewMetaData = data => {
@@ -104,6 +105,7 @@ const Comment = () => {
       <GuestFavorite />
       <ReviewMeta reviewMetaData={reviewMetaData} />
       <Review reviewData={reviewData} />
+      <ReviewInform />
     </div>
   )
 }
