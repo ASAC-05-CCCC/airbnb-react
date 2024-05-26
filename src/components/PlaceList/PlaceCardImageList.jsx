@@ -5,6 +5,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import GuestPreference from './GuestPreference'
+import './NavigationCustom.css'
 
 // 장소 이미지 슬라이더 리스트 (사진 넘기는거)
 const PlaceCardImageList = ({ photos }) => {
