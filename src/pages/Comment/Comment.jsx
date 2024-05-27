@@ -101,7 +101,7 @@ const Comment = () => {
   }
 
   return (
-    <div className='px-[46px]'>
+    <div className='flex flex-col px-20'>
       <GuestFavorite />
       <ReviewMeta reviewMetaData={reviewMetaData} />
       <Review reviewData={reviewData} />
