@@ -70,14 +70,14 @@ const generateReviewMetaData = data => {
 
 const Comment = () => {
   const [reviewData, setReviewData] = useState([])
-  const [reviewMetaData, setReivewMetaData] = useState([])
+  const [reviewMetaData, setReviewMetaData] = useState([])
 
   useEffect(() => {
     fetch('/json/Review.json')
       .then(response => response.json())
       .then(data => {
         setReviewData(processReviewData(data))
-        setReivewMetaData(generateReviewMetaData(data))
+        setReviewMetaData(generateReviewMetaData(data))
       })
       .catch(error => console.error('Error fetching ReviewData.json:', error))
   }, [])
@@ -101,7 +101,7 @@ const Comment = () => {
   }
 
   return (
-    <div className='px-20'>
+    <div className='px-[46px]'>
       <GuestFavorite />
       <ReviewMeta reviewMetaData={reviewMetaData} />
       <Review reviewData={reviewData} />
