@@ -1,10 +1,13 @@
-const GuestItem = ({ item }) => {
-  const { title, desc } = item
+import { useGuestContext } from '../../context/GuestCountContext'
+
+const GuestItem = ({ name, desc, title }) => {
+  const { increase, decrease, guest } = useGuestContext()
+
   return (
     <li
-      className={`flex items-center justify-between pb-6  border-b-2 ${
-        title == '반려동물' && 'border-none pb-0'
-      } `}
+      className={`flex items-center justify-between   ${
+        name === 'pets' ? 'border-none pb-0 ' : 'border-b-2 pb-4'
+      }`}
     >
       <div className='flex flex-col'>
         <p className=''>{title}</p>
@@ -14,11 +17,19 @@ const GuestItem = ({ item }) => {
       <div className='flex-1'></div>
 
       <div className='flex gap-4'>
-        <button className='px-2 transition-all border border-gray-200 rounded-full hover:border-gray-600'>
+        <button
+          name={name}
+          onClick={e => decrease(e)}
+          className='px-2 transition-all border border-gray-200 rounded-full hover:border-gray-600'
+        >
           -
         </button>
-        <span>0</span>
-        <button className='px-2 transition-all border border-gray-200 rounded-full hover:border-gray-600'>
+        <span>{guest[name]}</span>
+        <button
+          name={name}
+          onClick={e => increase(e)}
+          className='px-2 transition-all border border-gray-200 rounded-full hover:border-gray-600'
+        >
           +
         </button>
       </div>
