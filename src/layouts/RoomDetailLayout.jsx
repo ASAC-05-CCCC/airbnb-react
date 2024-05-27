@@ -1,3 +1,5 @@
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
 import Comment from '../pages/Comment/Comment'
 import RoomView from '../components/RoomView/RoomView'
 import RoomInfo from '../components/RoomInfo/RoomInfo'
