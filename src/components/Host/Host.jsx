@@ -19,7 +19,7 @@ const GenerateHostData = data => {
 
 const GenerateHostProfileData = data => {
   return data.map(item => {
-    return item.Hostprofile
+    return item.HostProfile
   })
 }
 
@@ -59,7 +59,7 @@ const Host = () => {
 
   return (
     <div className='flex justify-center px-10'>
-      <div className='flex-col max-w-[1000px]'>
+      <div className='flex-col max-w-7xl'>
         <div>
           <HostHeader />
         </div>
