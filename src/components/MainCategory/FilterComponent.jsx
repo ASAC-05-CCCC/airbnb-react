@@ -4,8 +4,6 @@ import DetailModal from '../common/DetailModal'
 function FilterComponent({ setIsFilterModal }) {
   const filterModalRef = useRef()
 
-  console.log(filterModalRef)
-
   useEffect(() => {
     function handleOutside(e) {
       if (!filterModalRef.current.contains(e.target)) {
