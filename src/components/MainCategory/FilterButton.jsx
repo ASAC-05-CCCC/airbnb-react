@@ -7,10 +7,12 @@ function FilterButton({ setIsFilterModal }) {
         setIsFilterModal(prev => !prev)
       }}
     >
-      <div>
-        <img src='/src/assets/hamburgerIcon.svg' />
+      <div className='p-1'>
+        <img src='/src/assets/FilterIcon.svg' />
       </div>
-      <div className='whitespace-nowrap'>필터</div>
+      <div className='whitespace-nowrap p-1'>
+        <div className='text-xs'>필터</div>
+      </div>
     </button>
   )
 }
