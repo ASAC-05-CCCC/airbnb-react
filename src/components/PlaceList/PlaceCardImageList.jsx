@@ -7,6 +7,7 @@ import 'swiper/css/navigation'
 import GuestPreference from './GuestPreference'
 import './NavigationCustom.css'
 import like from '../../assets/like.svg'
+import ArrowButton from '../common/ArrowButton'
 
 // 장소 이미지 슬라이더 리스트 (사진 넘기는거)
 const PlaceCardImageList = ({ photos, guestFavorite }) => {
@@ -19,7 +20,7 @@ const PlaceCardImageList = ({ photos, guestFavorite }) => {
         pagination={{
           clickable: true,
         }}
-        navigation={true} //화살표 커스텀
+        navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
         modules={[Pagination, Navigation]}
         className='mySwiper'
       >
@@ -44,6 +45,12 @@ const PlaceCardImageList = ({ photos, guestFavorite }) => {
             </div>
           </SwiperSlide>
         ))}
+        <div className='swiper-button-next custom-arrow-btn'>
+          <ArrowButton direction='left' />
+        </div>
+        <div className='swiper-button-prev custom-arrow-btn'>
+          <ArrowButton direction='right' />
+        </div>
       </Swiper>
     </div>
   )

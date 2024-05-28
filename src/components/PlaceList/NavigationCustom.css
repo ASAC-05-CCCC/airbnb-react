@@ -9,11 +9,9 @@
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
-  background-repeat: no-repeat; /* 배경 이미지 반복 없음 */
-  background-position: center; /* 배경 이미지 중앙 정렬 */
-  background-size: cover; /* 배경 이미지가 버튼 안에 꽉 차게 */
   opacity: 0; /* 화살표 안보이게 */
-  transition: opacity 0.3s; /* 투명도 변경 시 애니메이션 효과 */
+  transition: opacity 0.3s;
+  border-radius: 50%;
 }
 
 .swiper-button-next::after,
@@ -21,25 +19,17 @@
   content: none; /* 기본 화살표 제거 */
 }
 
-.swiper-button-next {
-  right: 15px;
-  background-image: url('/images/arrow-next.png');
-}
-
-.swiper-button-prev {
-  left: 15px;
-  background-image: url('/images/arrow-prev.png');
-}
-
-/* 마우스 올리면 나타남 */
 .mySwiper:hover .swiper-button-next,
 .mySwiper:hover .swiper-button-prev {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
-/* 화살표 이미지에 마우스를 올리면 크기 10% 커짐 */
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  transform: translateY(-50%) scale(1.1);
-  opacity: 1;
+  transform: translateY(-50%) scale(1.03);
+  opacity: 1 !important;
+}
+
+.custom-arrow-btn button {
+  border: none !important;
 }
