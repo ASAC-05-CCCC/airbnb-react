@@ -5,6 +5,10 @@ import ReviewModal from '../ReviewModal/ReviewModal.jsx'
 import { useState } from 'react'
 
 const Review = ({ reviewData, reviewMetaData }) => {
+  if (!reviewMetaData || reviewMetaData.length === 0) {
+    return <></>
+  }
+
   const [isModalOpen, setIsModalOpen] = useState(false)
   const openModal = () => {
     setIsModalOpen(true)
