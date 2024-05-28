@@ -1,8 +1,8 @@
 import React from 'react'
 import PlaceCardInfo from './PlaceCardInfo'
 import PlaceCardImageList from './PlaceCardImageList'
-import { accommodations } from '../data/accommodations'
-import placeData from '/public/json/placeData.json'
+
+import placeData from '/public/json/data.json' // 임시데이터
 
 // 전체 장소 리스트
 const PlaceList = () => {
