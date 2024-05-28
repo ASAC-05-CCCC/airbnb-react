@@ -1,12 +1,12 @@
-import { useState } from 'react'
-import './App.css'
+// import Comment from './pages/Comment/Comment.jsx'
+// import PlaceListPage from './pages/PlaceListPage.jsx'
+// import DetailModal from './components/common/DetailModal.jsx'
+import RoomDetailLayout from './layouts/RoomDetailLayout.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div></div>
+      <RoomDetailLayout />
     </>
   )
 }
