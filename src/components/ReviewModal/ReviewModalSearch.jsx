@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 
-const ReviewModalSearch = () => {
+const ReviewModalSearch = ({ data }) => {
   const [isFocused, setIsFocused] = useState(false)
 
   return (
     <div className='border-b border-solid px-6 pb-8'>
       <div className='flex flex-row justify-between'>
-        <div className='font-bold text-2xl'>후기 18</div>
+        <div className='font-bold text-2xl'>후기 {data}개</div>
         <div>최신순</div>
       </div>
       <form
-        className={`flex mt-8 p-2 w-full bg-white border border-solid rounded-full transition-colors duration-300 ${
+        className={`flex mt-8 p-2 w-full bg-white border-2 border-solid rounded-full transition-colors duration-300 ${
           isFocused ? 'border-black' : 'border-gray-400'
         }`}
       >
