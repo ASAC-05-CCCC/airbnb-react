@@ -1,6 +1,6 @@
 const ReviewOverall = ({ ratings }) => {
   return (
-    <div className='items-center w-[400px] mr-8'>
+    <div className='items-center mr-8'>
       <h3 className='font-semibold text-sm w-32'>전체 평점</h3>
       <ol className='list-none justify-between'>
         {ratings.map((rating, index) => (
